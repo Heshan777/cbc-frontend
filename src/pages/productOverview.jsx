@@ -37,14 +37,15 @@ export default function ProductOverview(){
     }, [params.id]);
 
     return(
-       <div className="w-full h-[calc(100vh-100px)] text-secondary">
+       <div className="w-full lg:h-[calc(100vh-100px)]  text-secondary bg-primary">
 			{status == "loading" && <Loader />}
 			{status == "success" && (
-				<div className="w-full h-full flex">
-					<div className="w-[50%] h-full flex justify-center items-center">
+				<div className="w-full  flex flex-col lg:flex-row p-10  ">
+					<h1 className="text-2xl font-bold text-center lg:hidden">{product.name}</h1>
+                    <div className="w-full h-full lg:w-[50%] flex justify-center items-center ">
                         <ImageSlider images={product.images}/>
                     </div>
-					<div className="w-[50%] h-full flex flex-col  items-center gap-4 p-10">
+					<div className="w-full h-full lg:w-[50%] flex flex-col  items-center gap-4 p-10">
                         <span className="">{product.productID}</span>
 						<h1 className="text-2xl font-bold text-center">{product.name}
                             {
@@ -71,7 +72,7 @@ export default function ProductOverview(){
                             <p className="text-lg text-accent font-semibold">LKR {product.price.toFixed(2)}</p>
                         }
                         <div className="w-full h-[40px] flex gap-4 mt-[60px]">
-                            <button className="w-[50%] h-full bg-accent text-white font-semibold hover:bg-accent/80"
+                            <button className="w-[50%] flex justify-center items-center h-full bg-accent text-white font-semibold hover:bg-accent/80"
                               onClick={()=>{
                                 addToCart(product, 1)
                                 toast.success("Added to cart")
@@ -89,7 +90,7 @@ export default function ProductOverview(){
                                 }
                             ]
 
-                            } className="w-[50%] text-center h-full border border-accent text-white bg-accent font-semibold hover:bg-accent/70 hover:text-white"
+                            } className="w-[50%] flex justify-center items-center text-center h-full border border-accent text-white bg-accent font-semibold hover:bg-accent/70 hover:text-white"
                              onClick={()=>{
                                 console.log(loadCart());
                              }}                            >Buy Now</Link>
