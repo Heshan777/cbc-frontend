@@ -3,27 +3,12 @@ import mediaUpload from "../utils/mediaUpload";
 
 
 export default function TestPage() {
-  const [file,setFile] = useState(null)
-
-	async function uploadImage(){
-
-		const link = await mediaUpload(file)
-		console.log(link);
-		
-
-	}
+ 
 
 	return (
-		<div className="w-full h-full flex justify-center items-center">
+		<div className="w-[400px] h-[400px] bg-green-400 md:bg-amber-400 lg:bg-amber-950">
 
-   	<input type="file" onChange={
-				(e)=>{
-					setFile(e.target.files[0])
-				}
-			}/>
-			<button className="bg-blue-500 text-white p-2 rounded" onClick={uploadImage}>
-				Upload
-			</button>
+   	
 		</div>
 	);
 }
