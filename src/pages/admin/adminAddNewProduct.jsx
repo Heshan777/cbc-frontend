@@ -216,7 +216,7 @@ export default function AddProductPage() {
 					</div>
 				</div>
 
-	return (<div className="w-full h-full">Sample add product page</div>)
+	
 				{/* Footer */}
 				<div className="flex items-center justify-between gap-3 border-t border-accent/20 px-6 py-4">
 					<span className="text-xs text-secondary/60">
