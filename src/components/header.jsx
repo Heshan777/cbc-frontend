@@ -61,8 +61,18 @@ export default function Header() {
 					<Link to="/about">About</Link>
 					<Link to="/contact">Contact</Link>
 				</div>
-				<div className="h-full hidden lg:flex w-[200px] absolute right-[100px] top-0  justify-end items-center gap-4">
+				<div className="h-full hidden lg:flex w-[250px] absolute right-[100px] top-0  justify-end items-center gap-4">
 					<UserData />
+					<button 
+  className="bg-accent text-white font-bold py-3 px-3 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 whitespace-nowrap" 
+  onClick={() => window.location.href = '/register'}
+>
+  Sign Up
+</button>
+  
+					<button className="bg-accent text-white font-bold py-3 px-3 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 whitespace-nowrap" onClick={() => window.location.href = '/login'}>
+						login
+					</button>
 				</div>
 				<Link
 					to="/cart"
