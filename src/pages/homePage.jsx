@@ -21,6 +21,8 @@ import CartPage from "./cart";
 import CheckOutPage from "./checkout";
 import { Loader } from "../components/loader"; 
 import ProductCard from "../components/productCard";
+import AboutPage from "./aboutPage";
+import ContactPage from "./contactPage";
 
 // ICONS
 import { 
@@ -312,8 +314,8 @@ export default function HomePage() {
             <Routes>
                 <Route path="/" element={<HomeContent />} />
                 <Route path="/products" element={<ProductPage/>} />
-                <Route path="/contact" element={<h1>Contact Us</h1>} />
-                <Route path="/about" element={<h1>About Us</h1>} />
+                <Route path="/contact" element={<ContactPage/>} />
+                <Route path="/about" element={<AboutPage/>} />
                 <Route path="/overview/:id" element={<ProductOverview/>}/>
                 <Route path="/*" element={<h1>404 Not Found</h1>} />
                 <Route path="/cart" element={<CartPage />} />
