@@ -102,6 +102,6 @@ export default function ProductOverview(){
 			{status == "error" && (
 				<h1 className="text-red-500">Failed to load product details</h1>
 			)}
-		</div>
+		</div>  
 	);
-}
+} 
